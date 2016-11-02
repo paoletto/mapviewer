@@ -114,7 +114,7 @@ int main(int argc, char *argv[])
 
     parameters[QStringLiteral("osm.useragent")] = QStringLiteral("QtLocation Mapviewer example");
     //parameters["osm.mapping.host"] = QStringLiteral("https://maps.wikimedia.org/osm-intl/");
-    parameters["osm.mapping.highdpi_tiles"] = "true";
+    //parameters["osm.mapping.highdpi_tiles"] = "true";
     parameters["here.mapping.highdpi_tiles"] = "true";
     parameters["mapbox.map_id"] = "mapbox.streets";
     parameters["mapbox.mapping.highdpi_tiles"] = "true";

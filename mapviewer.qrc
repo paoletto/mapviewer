@@ -33,5 +33,7 @@
         <file>resources/scale.png</file>
         <file>resources/marker.png</file>
         <file>resources/icon.png</file>
+        <file>resources/close.png</file>
+        <file>resources/open.png</file>
     </qresource>
 </RCC>
