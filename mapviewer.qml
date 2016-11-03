@@ -87,7 +87,7 @@ ApplicationWindow {
             map.zoomLevel = zoomLevel
             map.center = center
         } else {
-            map.zoomLevel = (map.maximumZoomLevel - map.minimumZoomLevel)/2
+            map.zoomLevel = 1 //(map.maximumZoomLevel - map.minimumZoomLevel)/2
         }
 
         map.forceActiveFocus()
@@ -123,8 +123,8 @@ ApplicationWindow {
     }
 
     title: qsTr("Mapviewer")
-    height: 1060
-    width: 1040
+    height: 1130
+    width: 1110
     visible: true
     menuBar: mainMenu
 
@@ -483,5 +483,24 @@ ApplicationWindow {
             onShowPointMenu: itemPopupMenu.show("Point",coordinate)
             onShowRouteList: stackView.showRouteListPage()
         }
+    }
+
+    Rectangle {
+        id: crossHairH
+        width: 20
+        height: 2
+        color: "deepskyblue"
+        border.width: 0
+        z: 100
+        anchors.centerIn: parent
+    }
+    Rectangle {
+        id: crossHairV
+        width: 2
+        height: 20
+        color: "deepskyblue"
+        border.width: 0
+        z: 100
+        anchors.centerIn: parent
     }
 }

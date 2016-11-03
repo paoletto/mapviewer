@@ -374,6 +374,99 @@ Map {
         anchorPoint: Qt.point(-poiTheQtComapny.sourceItem.width * 0.5,poiTheQtComapny.sourceItem.height * 1.5)
     }
 
+//    MapPolyline {
+//        line.width: 2
+//        line.color: 'black' //lightgray'
+//        path: [
+//            { latitude: 86, longitude: -179.98 },
+//            { latitude: -86, longitude: -179.98 }
+//        ]
+//    }
+//    MapPolyline {
+//        line.width: 2
+//        line.color: 'red' //lightgray'
+//        path: [
+//            { latitude: 86, longitude: 179.98 },
+//            { latitude: -86, longitude: 179.98 }
+//        ]
+//    }
+
+    MapPolyline {
+        line.width: 4
+        line.color: 'deepskyblue'
+        path: [
+            { latitude: 40, longitude: 160.0 },
+            { latitude: 55, longitude: -160.0 }
+        ]
+    }
+//    MapPolyline {
+//        line.width: 4
+//        line.color: 'deepskyblue'
+//        path: [
+//            { latitude: 40, longitude: -160.0 },
+//            { latitude: 55, longitude: 160.0 }
+//        ]
+//    }
+
+//    MapPolyline {
+//        line.width: 4
+//        line.color: 'deepskyblue'
+//        path: [
+//            { latitude: 40, longitude: 160.0 },
+//            { latitude: 55, longitude: -160.0 }
+//        ]
+//    }
+//    MapPolyline {
+//        line.width: 4
+//        line.color: 'deepskyblue'
+//        path: [
+//            { latitude: 40, longitude: 20.0 },
+//            { latitude: 55, longitude: -20.0 }
+//        ]
+//    }
+//    MapPolyline {
+//        line.width: 4
+//        line.color: 'deepskyblue'
+//        path: [
+//            { latitude: 40, longitude: -20.0 },
+//            { latitude: 55, longitude: 20.0 }
+//        ]
+//    }
+
+//    MapPolyline {
+//        line.width: 4
+//        line.color: 'deepskyblue'
+//        path: [
+//            { latitude: 40, longitude: 120.0 },
+//            { latitude: 55, longitude: 60.0 }
+//        ]
+//    }
+//    MapPolyline {
+//        line.width: 4
+//        line.color: 'deepskyblue'
+//        path: [
+//            { latitude: 40, longitude: 60.0 },
+//            { latitude: 55, longitude: 120.0 }
+//        ]
+//    }
+
+//    MapPolyline {
+//        line.width: 4
+//        line.color: 'deepskyblue'
+//        path: [
+//            { latitude: 40, longitude: -120.0 },
+//            { latitude: 55, longitude: -60.0 }
+//        ]
+//    }
+//    MapPolyline {
+//        line.width: 4
+//        line.color: 'deepskyblue'
+//        path: [
+//            { latitude: 40, longitude: -60.0 },
+//            { latitude: 55, longitude: -120.0 }
+//        ]
+//    }
+
     Button {
         id: sliderToggler
         z : parent.z + 1
