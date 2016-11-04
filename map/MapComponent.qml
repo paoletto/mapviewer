@@ -351,8 +351,8 @@ Map {
               + map.bearing.toFixed(1) + " tilt: " + map.tilt.toFixed(1) + " zl: " + map.zoomLevel
     }
 
-    //property var qtcoords: QtPositioning.coordinate(59.9485, 10.7686)
-    property var qtcoords: QtPositioning.coordinate(-59.9485, -160.7686)
+    property var qtcoords: QtPositioning.coordinate(59.9485, 10.7686)
+    //property var qtcoords: QtPositioning.coordinate(-59.9485, -160.7686)
 
     MapQuickItem {
         id: poiTheQtComapny
@@ -374,6 +374,7 @@ Map {
         anchorPoint: Qt.point(-poiTheQtComapny.sourceItem.width * 0.5,poiTheQtComapny.sourceItem.height * 1.5)
     }
 
+
 //    MapPolyline {
 //        line.width: 2
 //        line.color: 'black' //lightgray'
@@ -392,16 +393,16 @@ Map {
 //    }
 
 
-/*
-    MapPolyline {
-        line.width: 4
-        line.color: 'deepskyblue'
-        path: [
-            { latitude: 40, longitude: 160.0 },
-            { latitude: 55, longitude: -160.0 }
-        ]
-    }
-//*/
+/////*
+//    MapPolyline {
+//        line.width: 4
+//        line.color: 'deepskyblue'
+//        path: [
+//            { latitude: 40, longitude: 160.0 },
+//            { latitude: 55, longitude: -160.0 }
+//        ]
+//    }
+////*/
 
 //    MapPolyline {
 //        line.width: 4
@@ -462,13 +463,15 @@ Map {
 //            { latitude: 55, longitude: -60.0 }
 //        ]
 //    }
+
 ///*
     MapPolyline {
         line.width: 4
         line.color: 'deepskyblue'
         path: [
             { latitude: 40, longitude: -60.0 },
-            { latitude: 55, longitude: -120.0 }
+            { latitude: 55, longitude: -120.0 },
+            { latitude: 62, longitude: -100.0 }
         ]
     }
 //*/
