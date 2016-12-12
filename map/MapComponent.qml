@@ -347,8 +347,7 @@ Map {
         color: "crimson"
         anchors.top: parent.top
         anchors.left: parent.left
-        text: "" + parent.width + " x " + parent.height + " bearing: "
-              + map.bearing.toFixed(1) + " tilt: " + map.tilt.toFixed(1) + " zl: " + map.zoomLevel
+        text: "" + parent.width + " x " + parent.height //+ " bearing: " + map.bearing.toFixed(1) + " tilt: " + map.tilt.toFixed(1) + " zl: " + map.zoomLevel
     }
 
     property var qtcoords: QtPositioning.coordinate(59.9485, 10.7686)
@@ -362,17 +361,17 @@ Map {
         anchorPoint: Qt.point(sourceItem.width/2, sourceItem.height/2)
     }
 
-    MapQuickItem {
-        sourceItem: Text{
-            text: "The Qt Company"
-            color:"#242424"
-            font.bold: true
-            styleColor: "#ECECEC"
-            style: Text.Outline
-        }
-        coordinate: poiTheQtComapny.coordinate
-        anchorPoint: Qt.point(-poiTheQtComapny.sourceItem.width * 0.5,poiTheQtComapny.sourceItem.height * 1.5)
-    }
+//    MapQuickItem {
+//        sourceItem: Text{
+//            text: "The Qt Company"
+//            color:"#242424"
+//            font.bold: true
+//            styleColor: "#ECECEC"
+//            style: Text.Outline
+//        }
+//        coordinate: poiTheQtComapny.coordinate
+//        anchorPoint: Qt.point(-poiTheQtComapny.sourceItem.width * 0.5,poiTheQtComapny.sourceItem.height * 1.5)
+//    }
 
 
 //    MapPolyline {
@@ -473,8 +472,52 @@ Map {
             { latitude: 55, longitude: -120.0 },
             { latitude: 62, longitude: -100.0 }
         ]
+
+        MouseArea{
+            anchors.fill: parent
+            drag.target: parent
+            preventStealing: true
+        }
     }
 //*/
+
+//    MapPolygon {
+//        id: dragPoly
+//        color: 'green'
+//        path: [
+//            { latitude: 40, longitude: -60.0 },
+//            { latitude: 55, longitude: -120.0 },
+//            { latitude: 62, longitude: -100.0 }
+//        ]
+
+//        MouseArea  {
+//            anchors.fill: dragPoly
+//            drag.target: dragPoly
+//            preventStealing: true
+//        }
+//    }
+
+//    MapPolygon {
+//        id: tst
+//        color: 'darkmagenta'
+//        opacity: 1.0
+//        path: [
+//            { latitude: 19, longitude: 49 },
+//            { latitude: 18, longitude: 49 },
+//            { latitude: 18, longitude: 51 },
+//            { latitude: 20, longitude: 51 },
+//            { latitude: 20, longitude: 50 },
+//            { latitude: 18.5, longitude: 50 },
+//            { latitude: 18.5, longitude: 52 },
+//            { latitude: 19, longitude: 52 }
+//        ]
+
+//        MouseArea{
+//            anchors.fill: tst
+//            drag.target: tst
+
+//        }
+//    }
 
     Button {
         id: sliderToggler
@@ -772,6 +815,22 @@ Map {
         }
     }
 
+    //    Item {
+    //        id: mapSize
+    //        z: map.z + 3
+    //        anchors.top: parent.top
+    //        anchors.left: parent.left
+    //        anchors.margins: 4
+    //        height: sizeText.height
+    //        width: sizeText.width
+    //        Label {
+    //            id: sizeText
+    //            color: 'deepskyblue'
+    //            anchors.centerIn: parent
+    //            text: map.width + "x" + map.height
+    //        }
+    //    }
+
     Item {
         id: scale
         z: map.z + 3
@@ -814,7 +873,10 @@ Map {
     //! [routemodel0]
     RouteModel {
         id: routeModel
-        plugin : map.plugin
+        plugin :    Plugin {
+            id: osmPlugin
+            name: "osm"
+        } //map.plugin
         query:  RouteQuery {
             id: routeQuery
         }

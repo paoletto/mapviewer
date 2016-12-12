@@ -111,10 +111,10 @@ MenuBar {
             if (map.plugin.supportsGeocoding()) {
                 addItem(qsTr("Geocode")).triggered.connect(function(){selectTool("Geocode")})
             }
-            if (map.plugin.supportsRouting()) {
+//            if (map.plugin.supportsRouting()) {
                 addItem(qsTr("Route with coordinates")).triggered.connect(function(){selectTool("CoordinateRoute")})
                 addItem(qsTr("Route with address")).triggered.connect(function(){selectTool("AddressRoute")})
-            }
+//            }
 
             var item = addItem("")
             item.text = Qt.binding(function() { return isMiniMap ? qsTr("Hide minimap") : qsTr("Minimap") })
