@@ -123,6 +123,7 @@ int main(int argc, char *argv[])
     //parameters["osm.mapping.host"] = QStringLiteral("https://maps.wikimedia.org/osm-intl/");
     //parameters["osm.mapping.highdpi_tiles"] = "true";
     parameters["here.mapping.highdpi_tiles"] = "true";
+    //parameters["here.proxy"] = "http://127.0.0.1";
     parameters["mapbox.map_id"] = "mapbox.streets";
     parameters["mapbox.mapping.highdpi_tiles"] = "true";
 

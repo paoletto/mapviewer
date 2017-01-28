@@ -270,7 +270,7 @@ Map {
 
 //! [mapnavigation]
     // Enable pan, flick, and pinch gestures to zoom in and out
-    gesture.acceptedGestures: MapGestureArea.PanGesture | MapGestureArea.FlickGesture | MapGestureArea.PinchGesture
+    //gesture.acceptedGestures: MapGestureArea.PanGesture | MapGestureArea.FlickGesture | MapGestureArea.PinchGesture | MapGestureArea.RotationGesture | MapGestureArea.TiltGesture
     gesture.flickDeceleration: 3000
     gesture.enabled: true
 //! [mapnavigation]
@@ -680,13 +680,13 @@ Map {
 
             Slider {
                 id: tiltSlider;
-                minimumValue: 0;
-                maximumValue: 180;
+                minimumValue: map.minimumTilt;
+                maximumValue: map.maximumTilt;
                 anchors.margins: 30
                 anchors.bottom: parent.bottom
                 anchors.top: parent.top
                 orientation : Qt.Vertical
-                value: 0
+                value: map.tilt
                 onValueChanged: {
                     map.tilt = value;
                 }
@@ -694,13 +694,13 @@ Map {
 
             Slider {
                 id: fovSlider;
-                minimumValue: 1;
-                maximumValue: 179;
+                minimumValue: map.minimumFieldOfView;
+                maximumValue: map.maximumFieldOfView;
                 anchors.margins: 30
                 anchors.bottom: parent.bottom
                 anchors.top: parent.top
                 orientation : Qt.Vertical
-                value: 90
+                value: map.fieldOfView
                 onValueChanged: {
                     map.fieldOfView = value;
                 }
