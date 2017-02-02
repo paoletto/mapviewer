@@ -1,7 +1,7 @@
 TARGET = qml_location_mapviewer
 TEMPLATE = app
 
-QT += qml network quick positioning location
+QT += qml network quick positioning location sql opengl
 SOURCES += main.cpp
 
 RESOURCES += \
@@ -39,3 +39,7 @@ OTHER_FILES +=mapviewer.qml \
 
 target.path = $$[QT_INSTALL_EXAMPLES]/location/mapviewer
 INSTALLS += target
+
+contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
+    ANDROID_EXTRA_LIBS =
+}
